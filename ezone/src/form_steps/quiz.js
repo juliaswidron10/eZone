@@ -8,7 +8,7 @@ export class Quiz extends React.Component {
         this.state = {
             currentStep: 1,
             hours: 0,
-            stream: false,
+            streaming: false,
             interests: [],
             games: [],
             types: [],
@@ -16,21 +16,26 @@ export class Quiz extends React.Component {
         }
 
         this.handleChange = this.handleChange.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
         this._next = this._next.bind(this)
         this._prev = this._prev.bind(this)
         // this.handleBack = this.handleBack.bind(this)
         // this.handleForward = this.handleForward.bind(this)
     }
-    handleChange(event){
+    handleChange = (event) => {
         const {name, value} = event.target
+       
         this.setState({
             [name]: value
         })
+        // this.setState({[name]: event.target.value});
     }
     handleSubmit = (event) => {
         event.preventDefault()
-        const {currentStep, hours, stream, interests, games, types, content} = this.state
-        alert(`Boohooo`)
+        const {currentStep, hours, stream, interests, games, types, content} = this.props
+        alert(`Almost`)
+        console.log('You submited')
+        // const data = new FormData(event.target);
     }
     _next() {
         let currentStep = this.state.currentStep
@@ -74,31 +79,44 @@ export class Quiz extends React.Component {
         }
         return null;
       }
+      submitbutton(){
+          let currentStep = this.state.currentStep;
+          if(currentStep === 8){
+              return(
+                  <button
+                  className="btn submitbutton" onClick={this.handleSubmit} type="submit">
+                    Submit
+                  </button>
+              )
+          }
+          return null;
+      }
 
     render() {
         return(
             <div>
-                <form onSumit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit} onChange={this.handleChange} >
                     {/* <fieldset> */}
-                        <Step1 currentStep={this.state.currentStep} handleChange={this.hangleChange} />
-                        {/* </fieldset>
-                    <fieldset onSumit={this.handleSubmit}> */}
-                        <Step2 currentStep={this.state.currentStep} handleChange={this.hangleChange}/>
-                        <Step3 currentStep={this.state.currentStep} handleChange={this.hangleChange}/>
-                        <Step4 currentStep={this.state.currentStep} handleChange={this.hangleChange}/>
-                        <Step5 currentStep={this.state.currentStep} handleChange={this.hangleChange}/>
-                        {/* </fieldset>
-                    <fieldset> */}
-                        <Step6 currentStep={this.state.currentStep} handleChange={this.hangleChange}/>
+                        <Step1 currentStep={this.state.currentStep} onChange={this.handleChange}/>
+                        {/* </fieldset> */}
+                    {/* <fieldset onSumit={this.handleSubmit}> */}
+                        <Step2 currentStep={this.state.currentStep} onChange={this.handleChange}/>
+                        <Step3 currentStep={this.state.currentStep} onChange={this.handleChange}/>
+                        <Step4 currentStep={this.state.currentStep} onChange={this.handleChange}/>
+                        <Step5 currentStep={this.state.currentStep} onChange={this.handleChange}/>
                         {/* </fieldset>
                     <fieldset> */}
-                        <Step7 currentStep={this.state.currentStep} handleChange={this.hangleChange}/>
+                        <Step6 currentStep={this.state.currentStep} onChange={this.handleChange}/>
                         {/* </fieldset>
                     <fieldset> */}
-                        <Step8 currentStep={this.state.currentStep} handleChange={this.hangleChange}/>
+                        <Step7 currentStep={this.state.currentStep} onChange={this.handleChange}/>
+                        {/* </fieldset>
+                    <fieldset> */}
+                        <Step8 currentStep={this.state.currentStep} onChange={this.handleChange}/>
                         {/* </fieldset> */}
                         {this.previousButton()}
-        {this.nextButton()}
+                        {this.nextButton()}
+                        {this.submitbutton()}
                 </form>
             </div>
         )

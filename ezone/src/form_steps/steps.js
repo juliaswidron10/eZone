@@ -12,13 +12,13 @@ export class Step1 extends React.Component {
             <div className='minmaxrange'><p>0</p><p>18+</p></div>
             <input 
             className='form'
-            id='hoursplaying'
-            name='hoursplaying'
+            id='hours'
+            // name='hoursplaying'
             type='range'
             min='0' max='18'
             step='1'
-            value={this.props.hours} // Prop: The email input data
-        onChange={this.props.handleChange} 
+            name='hours'
+            onChange={this.props.handleChange} 
             />
             <h1 className="currentaState">10hrs/day</h1>
             <div>
@@ -27,8 +27,8 @@ export class Step1 extends React.Component {
                 className='steamradio'
                 id="streaming"
                 name='streaming'
-                type='radio'
-                value={this.props.stream} // Prop: The email input data
+                type='checkbox'
+                // value={this.props.stream} // Prop: The email input data
         onChange={this.props.handleChange} 
                 />
             </div>
@@ -51,7 +51,7 @@ export class Step2 extends React.Component {
             <label htmlFor='sleep'>Sleep</label>
             <input
             type="checkbox"
-            value='Sleep'
+            // value='Sleep'
             name='sleep'
             // checked={this.state.isGoing}
             // onChange={this.handleInputChange}
@@ -59,7 +59,7 @@ export class Step2 extends React.Component {
             <label htmlFor='hearing'>Hearing</label>
             <input
             type="checkbox"
-            value='Hearing'
+            // value='Hearing'
             name='hearing'
             // checked={this.state.isGoing}
             // onChange={this.handleInputChange}
@@ -67,7 +67,7 @@ export class Step2 extends React.Component {
              <label htmlFor='vision'>Vision</label>
             <input
             type="checkbox"
-            value='Vision'
+            // value='Vision'
             name='vision'
             // checked={this.state.isGoing}
             // onChange={this.handleInputChange}
@@ -75,7 +75,7 @@ export class Step2 extends React.Component {
              <label htmlFor='injuries'>Injuries</label>
             <input
             type="checkbox"
-            value='Injuries'
+            // value='Injuries'
             name='injuries'
             // checked={this.state.isGoing}
             // onChange={this.handleInputChange}
@@ -83,7 +83,7 @@ export class Step2 extends React.Component {
              <label htmlFor='nutrition'>Nutrition</label>
             <input
             type="checkbox"
-            value='Nutrition'
+            // value='Nutrition'
             name='nutrition'
             // checked={this.state.isGoing}
             // onChange={this.handleInputChange}
@@ -107,7 +107,7 @@ export class Step3 extends React.Component {
             <label htmlFor='mindset'>Mindset</label>
             <input
             type="checkbox"
-            value='Mindset'
+            // value='Mindset'
             name='mindset'
             // checked={this.state.isGoing}
             // onChange={this.handleInputChange}
@@ -115,7 +115,7 @@ export class Step3 extends React.Component {
             <label htmlFor='stress'>Stress</label>
             <input
             type="checkbox"
-            value='Stress'
+            // value='Stress'
             name='stress'
             // checked={this.state.isGoing}
             // onChange={this.handleInputChange}
@@ -123,7 +123,7 @@ export class Step3 extends React.Component {
              <label htmlFor='psychology'>Physiology</label>
             <input
             type="checkbox"
-            value='Physiology'
+            // value='Physiology'
             name='psychology'
             // checked={this.state.isGoing}
             // onChange={this.handleInputChange}
@@ -314,12 +314,11 @@ export class Step8 extends React.Component {
   // The markup for the Step 1 UI
   return(
     <div className="form-group">
-        <h1>What type of contend would you want to recive</h1>
-      <form>
+        <h1>What type of content would you want to recive</h1>
           <label htmlFor='articles'>Articles</label>
           <input
           type="checkbox"
-          value='Articles'
+          // value='Articles'
           name='articles'
           // checked={this.state.isGoing}
           // onChange={this.handleInputChange}
@@ -327,7 +326,7 @@ export class Step8 extends React.Component {
           <label htmlFor='discounts'>Discounts</label>
           <input
           type="checkbox"
-          value='Discounts'
+          // value='Discounts'
           name='dicounts'
           // checked={this.state.isGoing}
           // onChange={this.handleInputChange}
@@ -335,7 +334,7 @@ export class Step8 extends React.Component {
            <label htmlFor='events'>Online community events</label>
           <input
           type="checkbox"
-          value='events'
+          // value='events'
           name='events'
           // checked={this.state.isGoing}
           // onChange={this.handleInputChange}
@@ -343,12 +342,12 @@ export class Step8 extends React.Component {
             <label htmlFor='competitions'>Competitions</label>
           <input
           type="checkbox"
-          value='Competitions'
+          // value='Competitions'
           name='competitions'
           // checked={this.state.isGoing}
           // onChange={this.handleInputChange}
           ></input>
-      </form>
+
     </div>
   )}
 }
