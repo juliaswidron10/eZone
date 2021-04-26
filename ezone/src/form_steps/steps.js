@@ -8,10 +8,10 @@ export class Step1 extends React.Component {
     // The markup for the Step 1 UI
     return(
       <div className="form-group">
-            <label htmlFor='hoursplaying' >How many hours do you spend playing in a day?</label>
+            <label className="formlabel" htmlFor='hoursplaying' >How many hours do you spend playing in a day?</label>
             <div className='minmaxrange'><p>0</p><p>18+</p></div>
             <input 
-            className='form'
+            className='sliderinput'
             id='hours'
             // name='hoursplaying'
             type='range'
@@ -20,11 +20,11 @@ export class Step1 extends React.Component {
             name='hours'
             onChange={this.props.handleChange} 
             />
-            <h1 className="currentaState">10hrs/day</h1>
-            <div>
+            <h1 className="currentaState"> hrs/day</h1>
+            <div className="streaming">
                 <label htmlFor='streaming'>Do you stream your gameplay?</label>
                 <input 
-                className='steamradio'
+                className='checkmark'
                 id="streaming"
                 name='streaming'
                 type='checkbox'
@@ -234,7 +234,7 @@ export class Step6 extends React.Component {
   // The markup for the Step 1 UI
   return(
     <div className="form-group">
-        <label htmlFor='pick-games'>
+        <label htmlFor='pick-games'  className="formlabel">
         What games do you play?</label>
           <select id="pick-games"
           //  value={this.state.value} onChange={this.handleChange}
@@ -278,7 +278,7 @@ export class Step7 extends React.Component {
   // The markup for the Step 1 UI
   return(
     <div className="form-group">
-        <label htmlFor='pick-games'>
+        <label htmlFor='pick-games'  className="formlabel">
         What’s your favorite type of game to play?</label>
           <select id="pick-games"
           //  value={this.state.value} onChange={this.handleChange}

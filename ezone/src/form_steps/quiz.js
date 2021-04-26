@@ -94,7 +94,7 @@ export class Quiz extends React.Component {
 
     render() {
         return(
-            <div>
+            <div className="quizstyle centered">
                 <form onSubmit={this.handleSubmit} onChange={this.handleChange} >
                     {/* <fieldset> */}
                         <Step1 currentStep={this.state.currentStep} onChange={this.handleChange}/>
@@ -114,9 +114,12 @@ export class Quiz extends React.Component {
                     <fieldset> */}
                         <Step8 currentStep={this.state.currentStep} onChange={this.handleChange}/>
                         {/* </fieldset> */}
+                        <div className="navibutton">
                         {this.previousButton()}
                         {this.nextButton()}
                         {this.submitbutton()}
+                        </div>
+                       
                 </form>
             </div>
         )
