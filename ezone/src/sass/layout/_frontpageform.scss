@@ -1,5 +1,5 @@
-@import "../abstracts/vars";
-// @use "../abstracts/vars";
+// @import "../abstracts/vars";
+@use "../abstracts/vars" as *;
 
 .frontpage-form {
   margin-top: 20px;

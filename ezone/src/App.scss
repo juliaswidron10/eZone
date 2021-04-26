@@ -1,6 +1,6 @@
 // @import "./sass/abstracts/vars.scss";
-@import "./sass/abstracts";
-@import "./sass/animation";
-@import "./sass/base";
-@import "./sass/components";
-@import "./sass/layout";
+@use "./sass/abstracts";
+@use "./sass/animation";
+@use "./sass/base";
+@use "./sass/components";
+@use "./sass/layout";
