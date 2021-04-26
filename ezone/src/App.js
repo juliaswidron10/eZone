@@ -1,12 +1,11 @@
-import logo from './logo.svg';
-import './App.scss';
-import {Quiz} from './form_steps/quiz';
-
+import logo from "./logo.svg";
+import "./App.scss";
+import { FrontPage } from "./frontpage/frontpage.js";
 
 function App() {
   return (
     <div className="App">
-      <Quiz />
+      <FrontPage />
     </div>
   );
 }
