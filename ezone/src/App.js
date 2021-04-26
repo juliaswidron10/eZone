@@ -1,11 +1,10 @@
-
 import "./App.scss";
-import { Quiz } from "./form_steps/quiz.js";
+import { FrontPage } from "./frontpage/frontpage.js";
 
 function App() {
   return (
     <div className="App">
-      <Quiz />
+      <FrontPage />
     </div>
   );
 }
