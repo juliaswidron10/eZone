@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.scss";
 import { FrontPage } from "./frontpage/frontpage.js";
 
