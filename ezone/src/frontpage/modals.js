@@ -8,9 +8,9 @@ export class Modal1 extends React.Component {
     // The markup for the Step 1 UI
     return (
       <div className="modal modal-step1 centered">
-        <h4 className="headline-green">GEEEET AHEAD OF YOUR COMPETITION</h4>
+        <h4 className="headline-green">GET AHEAD OF YOUR COMPETITION</h4>
         <p>Be the first to hear when new articles are released and get exclusive content, by signing up for news.</p>
-        <form>
+        <form className="frontpage-form">
           <span className="form-group form-firstname">
             <input className="form-input" type="text" id="firstname" name="firstname" placeholder=" " />
             <label className="form-label" htmlFor="firstname">

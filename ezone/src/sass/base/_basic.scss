@@ -1,13 +1,18 @@
-@import "../abstracts/vars";
-
 * {
   margin: 0;
   padding: 0;
 }
 
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .frontpageBody {
   //   background-image: url(../../img/frontpage-bg.png);
-  background-color: $dark;
+  // background-color: $dark;
   background-size: cover;
   justify-content: center;
   align-items: center;

@@ -1,12 +1,6 @@
-@use "./sass/base";
-@use "./sass/layout";
-@use "./sass/components";
-@use "./sass/abstracts";
-@use "./sass/animation";
-
-body {
-}
-
-h4 {
-  font-family: "Shapiro-Light";
-}
+@import "./sass/abstracts/vars";
+@import "./sass/abstracts";
+@import "./sass/animation";
+@import "./sass/base";
+@import "./sass/components";
+@import "./sass/layout";
