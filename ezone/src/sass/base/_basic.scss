@@ -1,0 +1,15 @@
+@import "../abstracts/vars";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.frontpageBody {
+  //   background-image: url(../../img/frontpage-bg.png);
+  background-color: $dark;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

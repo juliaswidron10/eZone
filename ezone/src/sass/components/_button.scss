@@ -1,0 +1,36 @@
+button {
+  font-size: 0.6875rem;
+  font-family: "UniformProCon-Med", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: transparent;
+  padding: 9px 16px 7px;
+  border-radius: 50px;
+  transition: all 0.3s ease-in;
+}
+
+.btn-orange {
+  border: 2px solid var(--color-orange);
+  color: var(--color-orange);
+}
+
+.btn-orange:hover {
+  background-color: var(--color-orange);
+  color: var(--color-dark);
+}
+
+.btn-green {
+  border: 2px solid var(--color-green);
+  color: var(--color-green);
+}
+
+.btn-green:hover {
+  background-color: var(--color-green);
+  color: var(--color-dark);
+}
+
+.btn-frontpage {
+  position: relative;
+  margin-top: 34%;
+}
