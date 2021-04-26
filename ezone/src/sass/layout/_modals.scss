@@ -1,3 +1,30 @@
+@use "../abstracts/vars" as *;
+
+.modal {
+  width: 35%;
+  padding: 20px 40px 30px 40px;
+}
+
 .modal-step1 {
-  background: red;
+  background: $dark;
+  p {
+    color: white;
+  }
+
+  .headline-green {
+    color: $green;
+    font-family: "Uniform-Pro-Blk";
+    font-size: 1.5rem;
+  }
+}
+
+.modal-step2 {
+  h3 {
+    font-size: 2.5rem;
+    line-height: 1.125;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 1000;
+    padding-bottom: 50px;
+  }
 }

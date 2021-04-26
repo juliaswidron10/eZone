@@ -1,0 +1,70 @@
+@use "../abstracts/vars" as *;
+
+.color {
+  display: block;
+  width: 0;
+  height: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  transition: 0.8s ease;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.expanded {
+  border-radius: 0;
+  width: 70%;
+  padding-bottom: 30%;
+  height: auto;
+  border-radius: 2px;
+  z-index: -10;
+}
+
+.color--orange {
+  background-color: $orange;
+  transition-delay: 0.25s;
+}
+
+.slideup {
+  animation: slideup 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideup {
+  0% {
+    transform: translateY(-100px);
+  }
+
+  100% {
+    transform: translateY(100px);
+  }
+}
+
+.headline-animated {
+  span {
+    display: inline-block;
+    white-space: break-spaces;
+    -webkit-text-stroke: 1px $purple;
+    color: $purple;
+    animation: fill 0.5s calc(var(--index) * 0.02s + 1s) cubic-bezier(0.645, 0.045, 0.355, 1) both;
+    will-change: transform, color;
+  }
+}
+
+@keyframes fill {
+  from {
+    opacity: 0;
+    transform: translateX(2rem) scale(1.2);
+    color: $purple;
+  }
+
+  35% {
+    opacity: 1;
+  }
+
+  50% {
+    color: $purple;
+  }
+}
