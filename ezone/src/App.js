@@ -1,11 +1,11 @@
 import logo from "./logo.svg";
 import "./App.scss";
-import { FrontPage } from "./frontpage/frontpage.js";
+import { Background } from "./background/background.js";
 
 function App() {
   return (
     <div className="App">
-      <FrontPage />
+      <Background />
     </div>
   );
 }

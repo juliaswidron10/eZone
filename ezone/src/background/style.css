@@ -1,0 +1,161 @@
+@font-face {
+    font-family: "shapirobold";
+    src: url("sharpiro-bold-webfont.woff2") format("woff2"), url("sharpiro-bold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "shapiro-regularregular";
+    src: url("sharpiro-regular-webfont.woff2") format("woff2"), url("sharpiro-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "uniform_pro_conblk";
+    src: url("uniform-pro-con-black-webfont.woff2") format("woff2"), url("uniform-pro-con-black-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "uniform_pro_conmed";
+    src: url("uniform-pro-con-medium-webfont.woff2") format("woff2"), url("uniform-pro-con-medium-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    /*--main-font: raleway, sans-serif;
+    --secondary-font: candal, sans-serif;*/
+    --dark-color: #16152b;
+    --blue-color: #3e21d6;
+    --orange-color: #f48d6a;
+    --green-color: #5be080;
+}
+
+body {
+    /*font-family: shapiro, sans-serif;/*
+  /*color: var(--secondary-color);*/
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-color);
+}
+
+h1 {
+    font-family: uniform_pro_conblk, sans-serif;
+    /***** THIS FONT THIS IS NOT WORKING *******/
+    color: var(--blue-color);
+    font-size: 5rem;
+    padding: 0;
+    margin: 0;
+    font-weight: bolder;
+    /*font-weight: normal;
+  font-style: normal;*/
+}
+
+h2 {
+    font-family: uniform_pro_conblk, sans-serif;
+    /***** THIS FONT THIS IS NOT WORKING *******/
+    font-size: 5rem;
+    -webkit-text-stroke: 2px var(--blue-color);
+    -webkit-text-fill-color: var(--dark-color);
+    padding: 0;
+    margin: 0;
+    font-weight: bolder;
+}
+
+.background {
+    text-align: center;
+}
+
+/*
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  z-index: 4;
+}
+
+.btn {
+  width: 221px;
+  height: 57px;
+}
+
+.next-btn {
+  background: var(--blue-color);
+  border: 4px solid var(--blue-color);
+  border-radius: 29px;
+  color: var(--dark-color);
+  font-size: 2rem;
+}
+
+.back-btn {
+  background: var(--dark-color);
+  border: 4px solid var(--blue-color);
+  border-radius: 29px;
+  color: var(--blue-color);
+  font-size: 2rem;
+}
+
+.buttons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+*/
+
+.container {
+    position: relative;
+}
+
+.container-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.container-frames {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    
+}
+
+.solid-frame,
+.outline-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.solid-frame {
+    /* FROM XD PROTOTYPE
+  width: 1341px;
+  height: 695px;
+  */
+    width: 1141px;
+    height: 595px;
+    background: var(--dark-color);
+    z-index: 2;
+}
+
+.outline-frame {
+    /* FROM XD PROTOTYPE
+  width: 1201px;
+  height: 623px; */
+    width: 1101px;
+    height: 523px;
+    background: var(--dark-color);
+    border: 5px solid var(--blue-color);
+    z-index: 3;
+}
+
+/*.container-text {
+  z-index: 0;
+}*/
