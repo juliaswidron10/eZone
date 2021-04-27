@@ -2,10 +2,6 @@ import React from "react";
 
 export class Modal1 extends React.Component {
   render() {
-    // if (this.props.currentStep !== 1) { // Prop: The current step
-    //   return null
-    // }
-    // The markup for the Step 1 UI
     return (
       <div hidden className="modal modal-step1 centered">
         <h4 className="headline-green">GET AHEAD OF YOUR COMPETITION</h4>
