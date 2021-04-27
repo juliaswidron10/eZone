@@ -99,7 +99,7 @@ export class Quiz extends React.Component {
 
     render() {
         return(
-            <div className="quizstyle centered">
+            <div className="quizstyle slideup centered">
                 <form onSubmit={this.handleSubmit} onChange={this.handleChange} >
                     {/* <fieldset> */}
                         <Step1 currentStep={this.state.currentStep} onChange={this.handleChange}/>

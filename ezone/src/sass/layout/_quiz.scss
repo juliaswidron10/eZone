@@ -5,16 +5,17 @@
     align-content: center;
     justify-content: center;
     width: 70%;
-    height: 80%;
+    height: 75%;
     background-color: $dark;
     color: white;
     text-align: center;
     font-family: "Uniform-Pro-Med";
-   
 }
+
+
 .quizstyle > form {
     border: $orange 2px solid;
-    margin: 4rem;
+    margin: 3rem 4rem 0rem 4rem;
     width: auto;
     height: 73%;
 }
