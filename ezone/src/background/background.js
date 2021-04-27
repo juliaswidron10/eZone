@@ -6,16 +6,16 @@ export class Background extends React.Component {
         return(
             <div>
                 <header></header>
-                <div class="background">
-                    <h1 class="sentence">IMPROVE YOUR PERFORMANCE</h1>
-                    <div class="container">
-                        <h2 class="sentence">IMPROVE YOUR PERFORMANCE</h2>
-                        <h2 class="sentence">IMPROVE YOUR PERFORMANCE</h2>
-                        <h2 class="sentence">IMPROVE YOUR PERFORMANCE</h2>
-                        <h2 class="sentence">IMPROVE YOUR PERFORMANCE</h2>
-                        <h2 class="sentence">IMPROVE YOUR PERFORMANCE</h2>
-                        <div class="solid-frame centered"></div>
-                        <div class="outline-frame centered"></div>
+                <div className="background">
+                    <h1 className="sentence">IMPROVE YOUR PERFORMANCE</h1>
+                    <div className="container">
+                        <h2 className="sentence">IMPROVE YOUR PERFORMANCE</h2>
+                        <h2 className="sentence">IMPROVE YOUR PERFORMANCE</h2>
+                        <h2 className="sentence">IMPROVE YOUR PERFORMANCE</h2>
+                        <h2 className="sentence">IMPROVE YOUR PERFORMANCE</h2>
+                        <h2 className="sentence">IMPROVE YOUR PERFORMANCE</h2>
+                        <div className="solid-frame centered"></div>
+                        <div className="outline-frame centered"></div>
                     </div>
                 </div>
             </div>
