@@ -22,6 +22,16 @@ button {
   color: $dark;
 }
 
+.btn-purple {
+  border: 1px solid $purple;
+  color: $purple;
+}
+
+.btn-purple:hover {
+  background-color: $purple;
+  color: $orange;
+}
+
 .btn-green {
   border: 2px solid $green;
   color: $green;

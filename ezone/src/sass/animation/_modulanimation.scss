@@ -1,11 +1,20 @@
 @use "../abstracts/vars" as *;
 
+@keyframes blur {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 8;
+  }
+}
+
 .color {
   display: block;
   width: 0;
   height: 0;
   left: 50%;
-  top: 50%;
+  top: 45%;
   transform: translate(-50%, -50%);
   position: absolute;
   transition: 0.8s ease;
@@ -15,11 +24,11 @@
 
 .expanded {
   border-radius: 0;
-  width: 70%;
+  width: 100%;
   padding-bottom: 30%;
-  height: auto;
+  height: 30%;
   border-radius: 2px;
-  z-index: -10;
+  z-index: 10;
 }
 
 .color--orange {
@@ -27,27 +36,51 @@
   transition-delay: 0.25s;
 }
 
+.fadeout {
+  z-index: -10;
+  animation: fadeout 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 .slideup {
-  animation: slideup 3s;
+  animation: slideup 2s;
   animation-fill-mode: forwards;
 }
 
 @keyframes slideup {
   0% {
-    transform: translateY(-100px);
+    transform: translate(-50%, 90%);
   }
 
   100% {
-    transform: translateY(100px);
+    transform: translate(-50%, -40%);
   }
 }
 
 .headline-animated {
+  font-family: "Uniform-Pro-Blk";
+  font-size: 2.5rem;
+  line-height: 1.125;
+  font-weight: 700;
+  text-transform: uppercase;
+  z-index: 1000;
+  padding-bottom: 5px;
+
   span {
     display: inline-block;
     white-space: break-spaces;
     -webkit-text-stroke: 1px $purple;
-    color: $purple;
+    color: transparent;
     animation: fill 0.5s calc(var(--index) * 0.02s + 1s) cubic-bezier(0.645, 0.045, 0.355, 1) both;
     will-change: transform, color;
   }
@@ -57,14 +90,14 @@
   from {
     opacity: 0;
     transform: translateX(2rem) scale(1.2);
-    color: $purple;
+    color: transparent;
   }
 
   35% {
     opacity: 1;
   }
 
-  50% {
+  100% {
     color: $purple;
   }
 }
