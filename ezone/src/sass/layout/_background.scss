@@ -1,0 +1,34 @@
+.background {
+  text-align: center;
+  animation: opening 1s ease-out 1;
+}
+
+.container {
+  position: relative;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.solid-frame {
+  width: 70vw;
+  height: 76vh;
+  background: var(--dark-color);
+  z-index: 2;
+  animation: horizontal-unfold 0.3s ease-out 1;
+  margin-top: 5rem;
+}
+
+.outline-frame {
+  width: 65vw;
+  height: 64vh;
+  background: var(--dark-color);
+  border: 5px solid var(--blue-color);
+  z-index: 3;
+  animation: horizontal-unfold 1s ease-out 1;
+  margin-top: 5rem;
+}
