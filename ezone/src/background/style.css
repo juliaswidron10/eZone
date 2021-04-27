@@ -1,96 +1,133 @@
+@font-face {
+    font-family: "shapirobold";
+    src: url("sharpiro-bold-webfont.woff2") format("woff2"), url("sharpiro-bold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "shapiro-regularregular";
+    src: url("sharpiro-regular-webfont.woff2") format("woff2"), url("sharpiro-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "uniform_pro_conblk";
+    src: url("uniform-pro-con-black-webfont.woff2") format("woff2"), url("uniform-pro-con-black-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "uniform_pro_conmed";
+    src: url("uniform-pro-con-medium-webfont.woff2") format("woff2"), url("uniform-pro-con-medium-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
-  --dark-color: #16152b;
-  --blue-color: #3e21d6;
-  --orange-color: #f48d6a;
-  --green-color: #5be080;
+    /*--main-font: raleway, sans-serif;
+    --secondary-font: candal, sans-serif;*/
+    --dark-color: #16152b;
+    --blue-color: #3e21d6;
+    --orange-color: #f48d6a;
+    --green-color: #5be080;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--dark-color);
+    /*font-family: shapiro, sans-serif;/*
+  /*color: var(--secondary-color);*/
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-color);
 }
 
 h1 {
-  font-family: uniform_pro_conblk, sans-serif;
-  /***** THIS FONT THIS IS NOT WORKING *******/
-  color: var(--blue-color);
-  font-size: 5rem;
-  padding: 0;
-  margin: 0;
-  font-weight: bolder;
-  /*font-weight: normal;
+    font-family: uniform_pro_conblk, sans-serif;
+    /***** THIS FONT THIS IS NOT WORKING *******/
+    color: var(--blue-color);
+    font-size: 5rem;
+    padding: 0;
+    margin: 0;
+    font-weight: bolder;
+    /*font-weight: normal;
   font-style: normal;*/
 }
 
 h2 {
-  font-family: uniform_pro_conblk, sans-serif;
-  /***** THIS FONT THIS IS NOT WORKING *******/
-  font-size: 5rem;
-  -webkit-text-stroke: 2px var(--blue-color);
-  -webkit-text-fill-color: var(--dark-color);
-  padding: 0;
-  margin: 0;
-  font-weight: bolder;
+    font-family: uniform_pro_conblk, sans-serif;
+    /***** THIS FONT THIS IS NOT WORKING *******/
+    font-size: 5rem;
+    -webkit-text-stroke: 2px var(--blue-color);
+    -webkit-text-fill-color: var(--dark-color);
+    padding: 0;
+    margin: 0;
+    font-weight: bolder;
 }
 
 .background {
-  text-align: center;
-  animation: opening 1s ease-out 1;
+    text-align: center;
+    animation: opening 1s ease-out 1;
 }
 
 .container {
-  position: relative;
+    position: relative;
 }
 
 .centered {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
+
 .solid-frame {
-  /*width: 1010px;
+    /*width: 1010px;
     height: 500px;*/
-  width: 70vw;
-  height: 68vh;
-  background: var(--dark-color);
-  z-index: 2;
-  animation: horizontal-unfold 1s ease-out 1;
+    width: 70vw;
+    height: 75vh;
+    background: var(--dark-color);
+    z-index: 2;
+    animation: horizontal-unfold 0.3s ease-out 1;
 }
 
 .outline-frame {
-  /*width: 950px;
-    height: 430px;*/
-  width: 65vw;
-  height: 64vh;
-  background: var(--dark-color);
-  border: 5px solid var(--blue-color);
-  z-index: 3;
-  animation: horizontal-unfold 1s ease-out 1;
+/*
+    width: 950px;
+    height: 430px;
+*/
+    width: 65vw;
+    height: 64vh;
+    background: var(--dark-color);
+    border: 5px solid var(--blue-color);
+    z-index: 3;
+    animation: horizontal-unfold 1s ease-out 1;
 }
+
 
 /* ANIMATIONS */
 
 .sentence {
-  animation: vertical-unfold 1s ease-out 1;
+    animation: vertical-unfold 1.5s ease-out 1;
 }
 
 @keyframes vertical-unfold {
-  0% {
-    margin-bottom: -40px;
-  }
+    0% {
+        margin-bottom: -40px;
+        opacity: 0;
+    }
 }
 
 @keyframes horizontal-unfold {
-  0% {
-    width: 0;
-  }
+    0% {
+        width: 0;
+    }
 }
 
 @keyframes opening {
-  0% {
-    opacity: 0;
-  }
+    0% {
+        opacity: 0;
+    }
 }
