@@ -1,38 +1,57 @@
 @use "../abstracts/vars" as *;
-
+body{
+  background-color: $dark;
+}
 .backgroundanim {
   z-index: -10;
   text-align: center;
-  // animation: opening 1s ease-out 1;
-  // background-color: $orange;
+ background-color: $dark;
+ color: $orange;
+ width: 100vw;
+ height: 100vh;
+}
+.bck-text{
+  margin: 0;
+  padding: 0;
+  font-family: "Uniform-Pro-Blk";
+  font-size: 5.5rem;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+.filled{
+  z-index: -9;
+}
+.empty{
+  color: $dark;
+  -webkit-text-stroke: 2px $orange;
+  z-index: -12;
 }
 
-.container {
-  position: relative;
+
+.sentence {
+  animation: vertical-unfold 1.5s ease-out 1;
 }
 
-.centered {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+@keyframes vertical-unfold {
+  0% {
+    margin-top: -10rem;
+    // opacity: 0;
+  }
+  100%{
+    margin-top: 0rem;
+    // opacity: 0;
+  }
 }
+// }
 
-.solid-frame {
-  width: 70vw;
-  height: 76vh;
-  background: $dark;
-  z-index: 2;
-  animation: horizontal-unfold 0.3s ease-out 1;
-  margin-top: 5rem;
-}
+// @keyframes horizontal-unfold {
+//   0% {
+//     width: 0;
+//   }
+// }
 
-.outline-frame {
-  width: 65vw;
-  height: 64vh;
-  background: $dark;
-  border: 5px solid $orange;
-  z-index: 3;
-  animation: horizontal-unfold 1s ease-out 1;
-  margin-top: 5rem;
-}
+// @keyframes opening {
+//   0% {
+//     opacity: 0;
+//   }
+// }
