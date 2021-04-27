@@ -48,13 +48,14 @@
 .minmaxrange{
     display: flex;
     justify-content: space-evenly;
-    margin-left: -22%;
+    margin-left: -23%;
     padding: 1rem .5rem .5rem .5rem;
-    width: 140%;
+    width: 145%;
 }
 .sliderinput{
     width: 50%;
     margin-bottom: 1.5rem;
+    margin: 1.2rem auto;
 }
 input[type="range"] {
     -webkit-appearance: none;
@@ -84,14 +85,90 @@ input[type="range"]::-webkit-slider-thumb {
     font-size: 25px;
 }
 
-.streaming input {
+.streaming input[type="checkbox"] {
+    -webkit-appearance: none;
     margin-left: 2rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    cursor: pointer;
+    border-radius: 2rem;
+    border:none;
+    background-color: white;
 }
 
-.streaming .checkmark:after {
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
+.streaming input[type="checkbox"]:checked {
+    height: 1.5rem;
+    width: 1.5rem;
+    border: 5px solid white;
     background-color: $orange;
   }
+.checkbox-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    justify-content: space-around;
+}
+.checkboxdiv{
+    width: max-content;
+    height: 1.5rem;
+    border: 2px solid $orange;
+    border-radius: 1rem;
+    // padding: .2rem;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    text-align: center;
+    position: relative;
+    margin: .2rem;
+}
+div.checkboxdiv + input[type=checkbox]:checked {
+    background-color: $orange;
+    
+}
+.checkboxdiv > label{
+    padding: .3rem 1.2rem;
+    text-align: center;
+}
+input.switch{
+    z-index: 10;
+    position:absolute;
+    top: 0;
+    left: 0;
+    background-color: pink;
+      opacity: 100%;
+    width: 5rem;
+    height: 1.4rem;
+    cursor: pointer;
+  }
+
+//   input:checked{
+
+//   }
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+.form-group > input[type="text"] {
+    margin: 3rem auto; 
+    width: 60%;
+    border-radius: 2rem;
+    border: 2px solid $orange;
+    background-color: $dark;
+    padding: .3rem .7rem;
+    color: white;
+    font-size: 1.1rem;
+}
+.selected-games {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.selected-games > p{
+    border-radius: 2rem;
+    background-color: $orange;
+    padding: .5rem 1.2rem;
+    color: $dark;
+    margin: 1rem .4rem;
+}

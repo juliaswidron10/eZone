@@ -5,7 +5,7 @@ export class Step1 extends React.Component {
     if (this.props.currentStep !== 1) { // Prop: The current step
       return null
     }
-    // The markup for the Step 1 UI
+  
     return(
       <div className="form-group">
             <label className="formlabel" htmlFor='hoursplaying' >How many hours do you spend playing in a day?</label>
@@ -13,7 +13,6 @@ export class Step1 extends React.Component {
             <input 
             className='sliderinput'
             id='hours'
-            // name='hoursplaying'
             type='range'
             min='0' max='18'
             step='1'
@@ -28,7 +27,6 @@ export class Step1 extends React.Component {
                 id="streaming"
                 name='streaming'
                 type='checkbox'
-                // value={this.props.stream} // Prop: The email input data
         onChange={this.props.handleChange} 
                 />
             </div>
@@ -36,8 +34,7 @@ export class Step1 extends React.Component {
     )}
   }
 
-
-export class Step2 extends React.Component {
+  export class Step2 extends React.Component {
     render() {
     if (this.props.currentStep !== 2) { // Prop: The current step
       return null
@@ -48,180 +45,208 @@ export class Step2 extends React.Component {
           <h1>What areas would you like to improve?</h1>
           <div className='icon-areas'></div>
           <h1>Physical</h1>
-            <label htmlFor='sleep'>Sleep</label>
-            <input
-            type="checkbox"
-            // value='Sleep'
-            name='sleep'
-            // checked={this.state.isGoing}
-            // onChange={this.handleInputChange}
-            ></input>
-            <label htmlFor='hearing'>Hearing</label>
-            <input
-            type="checkbox"
-            // value='Hearing'
-            name='hearing'
-            // checked={this.state.isGoing}
-            // onChange={this.handleInputChange}
-            ></input>
-             <label htmlFor='vision'>Vision</label>
-            <input
-            type="checkbox"
-            // value='Vision'
-            name='vision'
-            // checked={this.state.isGoing}
-            // onChange={this.handleInputChange}
-            ></input>
-             <label htmlFor='injuries'>Injuries</label>
-            <input
-            type="checkbox"
-            // value='Injuries'
-            name='injuries'
-            // checked={this.state.isGoing}
-            // onChange={this.handleInputChange}
-            ></input>
-             <label htmlFor='nutrition'>Nutrition</label>
-            <input
-            type="checkbox"
-            // value='Nutrition'
-            name='nutrition'
-            // checked={this.state.isGoing}
-            // onChange={this.handleInputChange}
-            ></input> 
+          <div className="checkbox-container">
+          <div className="checkboxdiv">
+                <label htmlFor='sleep'>Sleep</label>
+                <input
+                  type="checkbox"
+                  className="switch"
+                  name='sleep'
+                ></input></div>
+           
+           <div className="checkboxdiv">
+                <label htmlFor='hearing'>Hearing</label>
+                <input
+                  type="checkbox"
+                  className="switch"
+                  name='hearing'
+                ></input></div>
+
+            <div className="checkboxdiv">
+                <label htmlFor='vision'>Vision</label>
+                <input
+                  type="checkbox"
+                  className="switch"
+                  name='vision'
+                 ></input></div> 
+
+            <div className="checkboxdiv">
+                <label htmlFor='injuries'>Injuries</label>
+                <input
+                  type="checkbox"
+                  className="switch"
+                  name='injuries'
+                ></input></div>
+
+            <div className="checkboxdiv">
+                <label htmlFor='nutrition'>Nutrition</label>
+                <input
+                  type="checkbox"
+                  className="switch"
+                  name='nutrition'
+                ></input></div>
+          </div>
+            
+             
+            
       </div>
     )}
   }
 
 
+
+
 export class Step3 extends React.Component {
     render() {
-    if (this.props.currentStep !== 3) { // Prop: The current step
+    if (this.props.currentStep !== 3) { 
       return null
     }
-    // The markup for the Step 1 UI
     return(
       <div className="form-group">
           <h1>What areas would you like to improve?</h1>
           <div className='icon-areas'></div>
           <h1>Mental</h1>
+          <div className="checkbox-container">
+          <div className="checkboxdiv">
             <label htmlFor='mindset'>Mindset</label>
             <input
-            type="checkbox"
-            // value='Mindset'
-            name='mindset'
-            // checked={this.state.isGoing}
-            // onChange={this.handleInputChange}
-            ></input>
+              type="checkbox"
+              className="switch"
+              name='mindset'
+            ></input></div>
+
+           <div className="checkboxdiv">
             <label htmlFor='stress'>Stress</label>
             <input
-            type="checkbox"
-            // value='Stress'
-            name='stress'
-            // checked={this.state.isGoing}
-            // onChange={this.handleInputChange}
-            ></input>
+              type="checkbox"
+              className="switch"
+              name='stress'
+            ></input></div>
+
+           <div className="checkboxdiv">
              <label htmlFor='psychology'>Physiology</label>
-            <input
-            type="checkbox"
-            // value='Physiology'
-            name='psychology'
-            // checked={this.state.isGoing}
-            // onChange={this.handleInputChange}
-            ></input>
+             <input
+              type="checkbox"
+              className="switch"
+              name='psychology'
+            ></input></div>
+           
+            </div>
       </div>
     )}
   }
 
 export class Step4 extends React.Component {
     render() {
-    if (this.props.currentStep !== 4) { // Prop: The current step
+    if (this.props.currentStep !== 4) { 
       return null
     }
-    // The markup for the Step 1 UI
     return(
+      
       <div className="form-group">
           <h1>What areas would you like to improve?</h1>
           <div className='icon-areas'></div>
           <h1>Skills</h1>
+          <div className="checkbox-container">
+
+          <div className="checkboxdiv">
             <label htmlFor='tactical'>Tactical</label>
             <input
-            type="checkbox"
-            value='Tactical'
-            name='tactical'
-            // checked={this.state.isGoing}
-            // onChange={this.handleInputChange}
+              type="checkbox"
+              value='Tactical'
+              name='tactical'
+              className="switch"
             ></input>
+          </div>
+           
+          <div className="checkboxdiv">
             <label htmlFor='strategy'>Strategy</label>
             <input
-            type="checkbox"
-            value='Strategy'
-            name='strategy'
-            // checked={this.state.isGoing}
-            // onChange={this.handleInputChange}
+              type="checkbox"
+              value='Strategy'
+              name='strategy'
+              className="switch"
             ></input>
-             <label htmlFor='leadership'>Leadership</label>
+          </div>
+           
+          <div className="checkboxdiv">
+            <label htmlFor='leadership'>Leadership</label>
             <input
-            type="checkbox"
-            value='Leadership'
-            name='leadership'
-            // checked={this.state.isGoing}
-            // onChange={this.handleInputChange}
+              type="checkbox"
+              value='Leadership'
+              name='leadership'
+              className="switch"
             ></input>
-             <label htmlFor='multitasking'>Multi-tasking</label>
+          </div>
+             
+          <div className="checkboxdiv">
+            <label htmlFor='multitasking'>Multitasking</label>
             <input
-            type="checkbox"
-            value='Multi-tasking'
-            name='multitasking'
-            // checked={this.state.isGoing}
-            // onChange={this.handleInputChange}
+              type="checkbox"
+              value='Multi-tasking'
+              name='multitasking'
+              className="switch"
             ></input>
-             <label htmlFor='communication'>Communication</label>
+          </div>
+             
+
+          <div className="checkboxdiv">
+            <label htmlFor='communication'>Communication</label>
             <input
-            type="checkbox"
-            value='Communication'
-            name='communication'
-            // checked={this.state.isGoing}
-            // onChange={this.handleInputChange}
+              type="checkbox"
+              value='Communication'
+              name='communication'
+              className="switch"
             ></input>
+          </div>
+            </div>
       </div>
     )}
   }
 
 export class Step5 extends React.Component {
   render() {
-  if (this.props.currentStep !== 5) { // Prop: The current step
+  if (this.props.currentStep !== 5) { 
     return null
   }
-  // The markup for the Step 1 UI
   return(
     <div className="form-group">
         <h1>What areas would you like to improve?</h1>
         <div className='icon-areas'></div>
         <h1>Gaming</h1>
+        <div className="checkbox-container">
+
+        <div className="checkboxdiv">
           <label htmlFor='technology'>Technology</label>
           <input
-          type="checkbox"
-          value='Technology'
-          name='technology'
-          // checked={this.state.isGoing}
-          // onChange={this.handleInputChange}
+            type="checkbox"
+            value='Technology'
+            name='technology'
+            className="switch"
           ></input>
-          <label htmlFor='coordination'>Hand/eye coordination</label>
-          <input
-          type="checkbox"
-          value='Hand/eye coordination'
-          name='coordination'
-          // checked={this.state.isGoing}
-          // onChange={this.handleInputChange}
-          ></input>
-           <label htmlFor='reaction'>Reaction time</label>
-          <input
-          type="checkbox"
-          value='Reaction time'
-          name='reaction'
-          // checked={this.state.isGoing}
-          // onChange={this.handleInputChange}
-          ></input>
+          </div>
+          
+          <div className="checkboxdiv">
+            <label htmlFor='coordination'>Hand/eye coordination</label>
+            <input
+              type="checkbox"
+              value='Hand/eye coordination'
+              name='coordination'
+              className="switch"
+            ></input>
+            </div>
+        
+            <div className="checkboxdiv">
+              <label htmlFor='reaction'>Reaction time</label>
+              <input
+                type="checkbox"
+                value='Reaction time'
+                name='reaction'
+                className="switch"
+              ></input>
+              </div>
+           
+          </div>
     </div>
   )}
 }
@@ -236,7 +261,16 @@ export class Step6 extends React.Component {
     <div className="form-group">
         <label htmlFor='pick-games'  className="formlabel">
         What games do you play?</label>
-          <select id="pick-games"
+        <input 
+                name='pick-games'
+                type="text"
+                onChangeText={(text) => this.setState({text})}
+                value={this.props.games}
+                maxLength = {28}
+                >
+                 
+                </input>
+          {/* <select id="pick-games"
           //  value={this.state.value} onChange={this.handleChange}
            >
             <option value="CS:GO">CS:GO</option>
@@ -260,10 +294,11 @@ export class Step6 extends React.Component {
             <option value="PUBG">PUBG</option>
             <option value="Diablo">Diablo</option>
             <option value="Minecraft">Minecraft</option>
-          </select>
+          </select> */}
           
         <div className="selected-games">
-          <p className="name-selected">name of the game</p>
+          <p className="name-selected">The Sims</p>
+          <p className="name-selected">Skyrim</p>
         </div>
     </div>
   )}
@@ -280,7 +315,16 @@ export class Step7 extends React.Component {
     <div className="form-group">
         <label htmlFor='pick-games'  className="formlabel">
         What’s your favorite type of game to play?</label>
-          <select id="pick-games"
+        <input 
+                name='pick-types'
+                type="text"
+                onChangeText={(text) => this.setState({text})}
+                value={this.props.types}
+                maxLength = {28}
+                >
+                 
+                </input>
+          {/* <select id="pick-games"
           //  value={this.state.value} onChange={this.handleChange}
            >
             <option value="FPS">FPS</option>
@@ -297,9 +341,10 @@ export class Step7 extends React.Component {
             <option value="Battle royale">Battle royale</option>
             <option value="Rhythym">Rhythym</option>
             <option value="Platform">Platform</option>
-          </select>
-        <div className="selected-types">
-          <p className="type-selected">name of the game</p>
+          </select> */}
+        <div className="selected-games">
+          <p className="name-selected">MMORPG</p>
+          <p className="name-selected">Simulation</p>
         </div>
     </div>
   )}
@@ -308,46 +353,61 @@ export class Step7 extends React.Component {
 
 export class Step8 extends React.Component {
   render() {
-  if (this.props.currentStep !== 8) { // Prop: The current step
+  if (this.props.currentStep !== 8) { 
     return null
   }
-  // The markup for the Step 1 UI
   return(
     <div className="form-group">
         <h1>What type of content would you want to recive</h1>
-          <label htmlFor='articles'>Articles</label>
-          <input
-          type="checkbox"
-          // value='Articles'
-          name='articles'
-          // checked={this.state.isGoing}
-          // onChange={this.handleInputChange}
-          ></input>
-          <label htmlFor='discounts'>Discounts</label>
-          <input
-          type="checkbox"
-          // value='Discounts'
-          name='dicounts'
-          // checked={this.state.isGoing}
-          // onChange={this.handleInputChange}
-          ></input>
-           <label htmlFor='events'>Online community events</label>
-          <input
-          type="checkbox"
-          // value='events'
-          name='events'
-          // checked={this.state.isGoing}
-          // onChange={this.handleInputChange}
-          ></input>
-            <label htmlFor='competitions'>Competitions</label>
-          <input
-          type="checkbox"
-          // value='Competitions'
-          name='competitions'
-          // checked={this.state.isGoing}
-          // onChange={this.handleInputChange}
-          ></input>
+        <div className="checkbox-container">
+          <div className="checkboxdiv">
+            <label htmlFor='articles'>Articles</label>
+            <input
+            type="checkbox"
+            name='articles'
+            className="switch"
+            ></input>
+            </div>
+          
+          <div className="checkboxdiv">
+            <label htmlFor='discounts'>Discounts</label>
+            <input
+              type="checkbox"
+              name='dicounts'
+              className="switch"
+              ></input>
+              </div>
+          
+              <div className="checkboxdiv">
+                <label htmlFor='events'>Online community events</label>
+                <input
+                  type="checkbox"
+                  name='events'
+                  className="switch"
+                ></input>
+                </div>
+           
+              <div className="checkboxdiv"> 
+                <label htmlFor='competitions'>Competitions</label>
+                <input
+                  type="checkbox"
+                  name='competitions'
+                  className="switch"
+                ></input>
+                </div>   
+          </div>
 
     </div>
   )}
+}
+
+export class Thankyou extends React.Component {
+  render() {
+    if (this.props.currentStep !== 9) { 
+      return null
+    }
+    return(<div>
+      <h1>NEED TO PUT ALEXS ANIMATION HERE</h1>
+    </div>)
+  }
 }

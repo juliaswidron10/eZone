@@ -1,5 +1,5 @@
 import React from 'react';
-import { Step1 , Step2, Step3, Step4, Step5, Step6, Step7, Step8 } from './steps.js';
+import { Step1 , Step2, Step3, Step4, Step5, Step6, Step7, Step8, Thankyou } from './steps.js';
 
 export class Quiz extends React.Component {
     constructor(props) {
@@ -33,16 +33,18 @@ export class Quiz extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
         const {currentStep, hours, stream, interests, games, types, content} = this.props
-        alert(`Almost`)
+        alert(`Something doesn't work with this submit`)
         console.log('You submited')
         // const data = new FormData(event.target);
     }
+
     _next() {
         let currentStep = this.state.currentStep
-        currentStep = currentStep >= 7? 8: currentStep + 1
+        currentStep = currentStep >= 8? 9: currentStep + 1
         this.setState({
             currentStep: currentStep
         })
+
     }
     _prev() {
         let currentStep = this.state.currentStep
@@ -84,12 +86,15 @@ export class Quiz extends React.Component {
           if(currentStep === 8){
               return(
                   <button
-                  className="btn submitbutton" onClick={this.handleSubmit} type="submit">
+                  className="btn submitbutton" type="submit"
+                  type="button" onClick={this.handleSubmit}>
                     Submit
                   </button>
               )
           }
-          return null;
+          return (
+              <Thankyou />
+          );
       }
 
     render() {
