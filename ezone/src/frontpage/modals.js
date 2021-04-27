@@ -7,7 +7,7 @@ export class Modal1 extends React.Component {
     // }
     // The markup for the Step 1 UI
     return (
-      <div className="modal modal-step1 centered">
+      <div hidden className="modal modal-step1 centered">
         <h4 className="headline-green">GET AHEAD OF YOUR COMPETITION</h4>
         <p>Be the first to hear when new articles are released and get exclusive content, by signing up for news.</p>
         <form className="frontpage-form">
