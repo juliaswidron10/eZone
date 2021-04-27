@@ -11,6 +11,7 @@
   p {
     color: white;
     font-size: 0.8rem;
+    font-weight: 700;
   }
 
   .headline-green {
@@ -22,12 +23,16 @@
 }
 
 .modal-step2 {
-  h3 {
-    font-size: 2.5rem;
-    line-height: 1.125;
+  margin-top: 20px;
+
+  p {
+    color: white;
+    color: black;
+    font-size: 0.9rem;
     font-weight: 700;
-    text-transform: uppercase;
-    z-index: 1000;
-    padding-bottom: 50px;
+  }
+
+  button {
+    margin-top: 40px;
   }
 }

@@ -3,12 +3,13 @@ import React from "react";
 export class Modal1 extends React.Component {
   openModal2() {
     console.log("modal2opeeeeen");
-    document.querySelector(".modal-step1").removeAttribute("hidden");
+    // document.querySelector(".modal-step1").removeAttribute("hidden");
     document.querySelectorAll("span").forEach((element) => {
       element.classList.add("expanded");
     });
 
     setTimeout(function () {
+      // document.querySelector(".modal-step1").style.background = "transparent";
       const headlineAnimated = document.querySelector(".headline-animated");
       headlineAnimated.removeAttribute("hidden");
       document.querySelector(".modal-step2").removeAttribute("hidden");
@@ -48,6 +49,11 @@ export class Modal1 extends React.Component {
       //     });
       // }
     }, 500);
+
+    setTimeout(function () {
+      console.log("latelate");
+      document.querySelector(".modal-step2").style.background = "#fec3a4";
+    }, 1000);
   }
 
   render() {
