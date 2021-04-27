@@ -1,5 +1,14 @@
 @use "../abstracts/vars" as *;
 
+@keyframes blur {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 8;
+  }
+}
+
 .color {
   display: block;
   width: 0;
@@ -27,18 +36,34 @@
   transition-delay: 0.25s;
 }
 
+.fadeout {
+  z-index: -10;
+  animation: fadeout 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 .slideup {
-  animation: slideup 3s;
+  animation: slideup 2s;
   animation-fill-mode: forwards;
 }
 
 @keyframes slideup {
   0% {
-    transform: translateY(-100px);
+    transform: translate(-50%, 90%);
   }
 
   100% {
-    transform: translateY(100px);
+    transform: translate(-50%, -40%);
   }
 }
 

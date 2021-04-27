@@ -21,3 +21,10 @@
   text-align: center;
   font-family: "Shapiro";
 }
+
+.overlay {
+  box-shadow: inset 0 0 0 100vw rgba(17, 15, 27, 0.9);
+  animation: blur 2s;
+  animation-fill-mode: forwards;
+  height: 100vh;
+}

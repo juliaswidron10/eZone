@@ -33,9 +33,3 @@ export default CommonComponentsMain;
 //   modalStep1.removeAttribute("hidden");
 //   modalStep1.classList.add("slideup");
 // });
-
-export function openModal1() {
-  console.log("showmodal1");
-  document.querySelector(".modal-step1").removeAttribute("hidden");
-  document.querySelector(".modal-step1").classList.add("slideup");
-}

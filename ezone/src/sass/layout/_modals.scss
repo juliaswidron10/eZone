@@ -2,19 +2,22 @@
 
 .modal {
   width: 35%;
-  padding: 20px 20px 30px 20px;
+  padding: 40px 30px;
+  border-radius: 2px;
 }
 
 .modal-step1 {
   background: $dark;
   p {
     color: white;
+    font-size: 0.8rem;
   }
 
   .headline-green {
     color: $green;
     font-family: "Uniform-Pro-Blk";
-    font-size: 1.5rem;
+    font-size: 2rem;
+    padding-bottom: 20px;
   }
 }
 
