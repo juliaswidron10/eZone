@@ -5,7 +5,7 @@ export class Background extends React.Component {
     render() {
         return(
             <div>
-                <nav></nav>
+                <header></header>
                 <div class="background">
                     <h1 class="sentence">IMPROVE YOUR PERFORMANCE</h1>
                     <div class="container">

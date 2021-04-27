@@ -15,6 +15,14 @@ body {
   background-color: var(--dark-color);
 }
 
+header {
+  background-image: url(images/nav-bar.svg);
+  background-size: 100%;
+  width: 100vw;
+  height: 6vw;
+  background-repeat: no-repeat;
+}
+
 h1 {
   font-family: uniform_pro_conblk, sans-serif;
   /***** THIS FONT THIS IS NOT WORKING *******/
