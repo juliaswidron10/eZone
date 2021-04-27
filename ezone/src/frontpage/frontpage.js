@@ -3,14 +3,17 @@ import { Modal1 } from "./modals.js";
 import { FrontButton } from "./functions.js";
 import CommonComponentsMain from "./functions";
 import { CommonOne, CommonTwo, CommonThree } from "./functions";
+import { openModal1 } from "./functions";
 
 export class FrontPage extends React.Component {
   render() {
     return (
       <div>
         {" "}
-        <button className="btn-green btn-frontpage">IMPROVE YOUR PERFORMANCE</button>
         <Modal1 />
+        <button className="btn-green btn-frontpage" onClick={openModal1()}>
+          IMPROVE YOUR PERFORMANCE
+        </button>
         {/* <FrontButton /> */}
         <CommonComponentsMain />
         <CommonOne />
