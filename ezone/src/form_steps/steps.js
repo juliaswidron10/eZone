@@ -44,8 +44,9 @@ export class Step1 extends React.Component {
       <div className="form-group">
           <h1>What areas would you like to improve?</h1>
           <div className='icon-areas'></div>
-          <h1>Physical</h1>
+          <h1 className="specialh">Physical</h1>
           <div className="checkbox-container">
+
           <div className="checkboxdiv">
                 <label htmlFor='sleep'>Sleep</label>
                 <input
@@ -105,7 +106,7 @@ export class Step3 extends React.Component {
       <div className="form-group">
           <h1>What areas would you like to improve?</h1>
           <div className='icon-areas'></div>
-          <h1>Mental</h1>
+          <h1 className="specialh">Mental</h1>
           <div className="checkbox-container">
           <div className="checkboxdiv">
             <label htmlFor='mindset'>Mindset</label>
@@ -146,7 +147,7 @@ export class Step4 extends React.Component {
       <div className="form-group">
           <h1>What areas would you like to improve?</h1>
           <div className='icon-areas'></div>
-          <h1>Skills</h1>
+          <h1 className="specialh">Skills</h1>
           <div className="checkbox-container">
 
           <div className="checkboxdiv">
@@ -213,7 +214,7 @@ export class Step5 extends React.Component {
     <div className="form-group">
         <h1>What areas would you like to improve?</h1>
         <div className='icon-areas'></div>
-        <h1>Gaming</h1>
+        <h1 className="specialh">Gaming</h1>
         <div className="checkbox-container">
 
         <div className="checkboxdiv">
@@ -396,7 +397,6 @@ export class Step8 extends React.Component {
                 ></input>
                 </div>   
           </div>
-
     </div>
   )}
 }

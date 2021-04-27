@@ -142,10 +142,6 @@ input.switch{
     cursor: pointer;
   }
 
-//   input:checked{
-
-//   }
-
 .form-group{
     display: flex;
     flex-direction: column;
@@ -171,4 +167,9 @@ input.switch{
     padding: .5rem 1.2rem;
     color: $dark;
     margin: 1rem .4rem;
+}
+
+.specialh{
+    color: $orange;
+    padding-top: 2rem;
 }
