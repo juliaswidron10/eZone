@@ -8,6 +8,13 @@ export class Modal1 extends React.Component {
       element.classList.add("expanded");
     });
 
+    document.querySelector(".modal-step1").classList.remove("slideup");
+    document.querySelector(".modal-step1").style.top = "56%";
+    document.querySelector(".modal-step1").classList.add("background-fadeout");
+    document.querySelector(".modal-step1").children[0].classList.add("fadeout");
+    document.querySelector(".modal-step1").children[1].classList.add("fadeout");
+    document.querySelector(".modal-step1").children[2].classList.add("fadeout");
+
     setTimeout(function () {
       // document.querySelector(".modal-step1").style.background = "transparent";
       const headlineAnimated = document.querySelector(".headline-animated");
@@ -49,11 +56,6 @@ export class Modal1 extends React.Component {
       //     });
       // }
     }, 500);
-
-    setTimeout(function () {
-      console.log("latelate");
-      document.querySelector(".modal-step2").style.background = "#fec3a4";
-    }, 1000);
   }
 
   render() {
@@ -100,6 +102,16 @@ export class Modal1 extends React.Component {
 }
 
 export class Modal2 extends React.Component {
+  closeModal2() {
+    document.querySelector(".modal-step1").style.background = "transparent";
+    document.querySelector(".modal-step1").classList.add("slidedown");
+    document.querySelector(".modal-step2").classList.add("slidedown");
+    document.querySelector(".frontpageBody").classList.remove("overlay");
+    document.querySelector(".btn-frontpage").classList.remove("fadeout");
+    // document.querySelector(".frontpageBody").classList.add("overlayout");
+    // document.querySelector(".btn-frontpage").classList.ad
+  }
+
   render() {
     return (
       <div hidden className="modal modal-step2 centered">
@@ -107,7 +119,9 @@ export class Modal2 extends React.Component {
           IT'S GREAT TO HAVE YOU!
         </h3>
         <p>Check your email to confirm &amp; customize subscription!</p>
-        <button className="btn-purple btn-signup-step2">BACK TO THE PAGE</button>
+        <button className="btn-purple btn-signup-step2" onClick={() => this.closeModal2()}>
+          BACK TO THE PAGE
+        </button>
       </div>
     );
   }

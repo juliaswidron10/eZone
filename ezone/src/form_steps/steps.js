@@ -79,6 +79,7 @@ export class Step3 extends React.Component {
     )}
   }
 
+
 export class Step4 extends React.Component {
     render() {
     if (this.props.currentStep !== 4) { 
