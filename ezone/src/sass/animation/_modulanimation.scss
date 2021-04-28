@@ -9,26 +9,36 @@
   }
 }
 
+@keyframes blur-out {
+  0% {
+    opacity: 8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .color {
   display: block;
   width: 0;
   height: 0;
   left: 50%;
-  top: 45%;
+  top: 85%;
   transform: translate(-50%, -50%);
   position: absolute;
   transition: 0.8s ease;
-  border-radius: 50%;
+  border-radius: 100%;
   background-color: transparent;
 }
 
 .expanded {
   border-radius: 0;
   width: 100%;
-  padding-bottom: 30%;
-  height: 30%;
+  // padding-bottom: 30%;
+  height: 100%;
   border-radius: 2px;
   z-index: 10;
+  clip-path: inset(0 0 44% 0);
 }
 
 .color--orange {
@@ -38,7 +48,7 @@
 
 .fadeout {
   z-index: -10;
-  animation: fadeout 2s;
+  animation: fadeout 1s;
   animation-fill-mode: forwards;
 }
 
@@ -64,6 +74,21 @@
 
   100% {
     transform: translate(-50%, -40%);
+  }
+}
+
+.background-fadeout {
+  animation: background-fadeout 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes background-fadeout {
+  0% {
+    background: $dark;
+  }
+
+  100% {
+    background: transparent;
   }
 }
 
@@ -99,5 +124,22 @@
 
   100% {
     color: $purple;
+  }
+}
+
+.slidedown {
+  animation: slidedown 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slidedown {
+  0% {
+    transform: translate(-50%, -40%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, 70%);
+    opacity: 0;
   }
 }

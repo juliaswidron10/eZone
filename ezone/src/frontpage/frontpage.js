@@ -11,10 +11,14 @@ export class FrontPage extends React.Component {
 
   openModal1() {
     console.log("showmodal1");
+    //reset
+    // document.querySelector(".modal-step1").classList.remove("slidedown");
+    // document.querySelector(".modal-step2").classList.remove("slidedown");
+
     document.querySelector(".frontpageBody").classList.add("overlay");
+    document.querySelector(".btn-frontpage").classList.add("fadeout");
     document.querySelector(".modal-step1").removeAttribute("hidden");
     document.querySelector(".modal-step1").classList.add("slideup");
-    document.querySelector(".btn-frontpage").classList.add("fadeout");
   }
 
   render() {
