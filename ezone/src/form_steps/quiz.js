@@ -1,6 +1,7 @@
 import React from 'react';
 import { Step1 , Step2, Step3, Step4, Step5, Step6, Step7, Step8, Thankyou } from './steps.js';
 
+
 export class Quiz extends React.Component {
     constructor(props) {
         super(props)
@@ -134,6 +135,7 @@ export class Quiz extends React.Component {
                         </div>
                        
                 </form>
+
             </div>
         )
     }
