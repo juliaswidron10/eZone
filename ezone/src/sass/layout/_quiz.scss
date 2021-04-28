@@ -123,6 +123,11 @@ input[type="range"]::-webkit-slider-thumb {
     position: relative;
     margin: .2rem;
 }
+.checkboxdiv.active{
+    background-color: $orange;
+    color: $dark
+}
+
 div.checkboxdiv + input[type=checkbox]:checked {
     background-color: $orange;
     
@@ -137,7 +142,7 @@ input.switch{
     top: 0;
     left: 0;
     background-color: pink;
-      opacity: 100%;
+      opacity: 0%;
     width: 5rem;
     height: 1.4rem;
     cursor: pointer;

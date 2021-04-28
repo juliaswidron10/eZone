@@ -7,7 +7,7 @@ export class Quiz extends React.Component {
         
         this.state = {
             currentStep: 1,
-            hours: 0,
+            hours: 18,
             streaming: false,
             interests: [],
             games: [],
@@ -17,6 +17,7 @@ export class Quiz extends React.Component {
 
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleChangeCheckbox = this.handleChangeCheckbox.bind(this)
         this._next = this._next.bind(this)
         this._prev = this._prev.bind(this)
         // this.handleBack = this.handleBack.bind(this)
@@ -24,10 +25,25 @@ export class Quiz extends React.Component {
     }
     handleChange = (event) => {
         const {name, value} = event.target
-       
+       console.log(name,value)
         this.setState({
             [name]: value
         })
+        // this.setState({[name]: event.target.value});
+    }
+    handleChangeCheckbox = (event) => {
+        const {name, checked} = event.target
+       console.log(name,checked)
+        this.setState({
+            [name]: checked
+        })
+        if(this.state.name === true) {
+            let inputStyle = {
+                backgroundColor: '$orange',
+                color: '$dark'
+            }
+          }  
+
         // this.setState({[name]: event.target.value});
     }
     handleSubmit = (event) => {
@@ -70,7 +86,7 @@ export class Quiz extends React.Component {
       
       nextButton(){
         let currentStep = this.state.currentStep;
-        if(currentStep < 8){
+        if(currentStep < 9){
           return (
             <button 
               className="btn btn-primary float-right" 
@@ -87,7 +103,7 @@ export class Quiz extends React.Component {
               return(
                   <button
                   className="btn submitbutton" type="submit"
-                  type="button" onClick={this.handleSubmit}>
+                  type="button" onClick={this._next}>
                     Submit
                   </button>
               )
@@ -98,27 +114,18 @@ export class Quiz extends React.Component {
       }
 
     render() {
+        
         return(
             <div className="quizstyle slideup centered">
-                <form onSubmit={this.handleSubmit} onChange={this.handleChange} >
-                    {/* <fieldset> */}
-                        <Step1 currentStep={this.state.currentStep} onChange={this.handleChange}/>
-                        {/* </fieldset> */}
-                    {/* <fieldset onSumit={this.handleSubmit}> */}
-                        <Step2 currentStep={this.state.currentStep} onChange={this.handleChange}/>
-                        <Step3 currentStep={this.state.currentStep} onChange={this.handleChange}/>
-                        <Step4 currentStep={this.state.currentStep} onChange={this.handleChange}/>
-                        <Step5 currentStep={this.state.currentStep} onChange={this.handleChange}/>
-                        {/* </fieldset>
-                    <fieldset> */}
+                <form onSubmit={this.handleSubmit} >
+                        <Step1 currentStep={this.state.currentStep} onCheckboxChange={this.handleChangeCheckbox} onChange={this.handleChange} hours={this.state.hours}/>
+                        <Step2 currentStep={this.state.currentStep} onCheckboxChange={this.handleChangeCheckbox} onChange={this.handleChange}/>
+                        <Step3 currentStep={this.state.currentStep} onCheckboxChange={this.handleChangeCheckbox} onChange={this.handleChange}/>
+                        <Step4 currentStep={this.state.currentStep} onCheckboxChange={this.handleChangeCheckbox} onChange={this.handleChange}/>
+                        <Step5 currentStep={this.state.currentStep} onCheckboxChange={this.handleChangeCheckbox} onChange={this.handleChange}/>
                         <Step6 currentStep={this.state.currentStep} onChange={this.handleChange}/>
-                        {/* </fieldset>
-                    <fieldset> */}
                         <Step7 currentStep={this.state.currentStep} onChange={this.handleChange}/>
-                        {/* </fieldset>
-                    <fieldset> */}
-                        <Step8 currentStep={this.state.currentStep} onChange={this.handleChange}/>
-                        {/* </fieldset> */}
+                        <Step8 currentStep={this.state.currentStep} onCheckboxChange={this.handleChangeCheckbox} onChange={this.handleChange}/>
                         <div className="navibutton">
                         {this.previousButton()}
                         {this.nextButton()}

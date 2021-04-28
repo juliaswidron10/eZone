@@ -2,19 +2,31 @@
 body{
   background-color: $dark;
 }
+header{
+  width: 100vw;
+  height: 5vw;
+  margin-bottom: .3rem;
+  margin-top: -.4rem;
+  z-index: 20;
+  background-image: url('../../background/navig.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid rgba(95, 87, 127, 0.267);
+}
 .backgroundanim {
   z-index: -10;
   text-align: center;
  background-color: $dark;
  color: $orange;
  width: 100vw;
- height: 100vh;
+ height: 96vh;
+ overflow: hidden;
 }
 .bck-text{
-  margin: 0;
+  margin: -.6rem 0 0 0;
   padding: 0;
   font-family: "Uniform-Pro-Blk";
-  font-size: 6.95rem;
+  font-size: 6.85rem;
   overflow: hidden;
   text-transform: uppercase;
 }
@@ -38,20 +50,7 @@ body{
     // opacity: 0;
   }
   100%{
-    margin-top: 0rem;
+    margin-top: -.6rem;
     // opacity: 0;
   }
 }
-// }
-
-// @keyframes horizontal-unfold {
-//   0% {
-//     width: 0;
-//   }
-// }
-
-// @keyframes opening {
-//   0% {
-//     opacity: 0;
-//   }
-// }

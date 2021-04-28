@@ -1,4 +1,5 @@
 import React from 'react';
+import CheckBox from './checkbox.js';
 
 export class Step1 extends React.Component {
     render() {
@@ -17,9 +18,9 @@ export class Step1 extends React.Component {
             min='0' max='18'
             step='1'
             name='hours'
-            onChange={this.props.handleChange} 
+            onChange={this.props.onChange} 
             />
-            <h1 className="currentaState"> hrs/day</h1>
+            <h1 className="currentaState">{this.props.hours} hrs/day</h1>
             <div className="streaming">
                 <label htmlFor='streaming'>Do you stream your gameplay?</label>
                 <input 
@@ -27,7 +28,7 @@ export class Step1 extends React.Component {
                 id="streaming"
                 name='streaming'
                 type='checkbox'
-        onChange={this.props.handleChange} 
+        onChange={this.props.onCheckboxChange} 
                 />
             </div>
       </div>
@@ -46,50 +47,12 @@ export class Step1 extends React.Component {
           <div className='icon-areas'></div>
           <h1 className="specialh">Physical</h1>
           <div className="checkbox-container">
-
-          <div className="checkboxdiv">
-                <label htmlFor='sleep'>Sleep</label>
-                <input
-                  type="checkbox"
-                  className="switch"
-                  name='sleep'
-                ></input></div>
-           
-           <div className="checkboxdiv">
-                <label htmlFor='hearing'>Hearing</label>
-                <input
-                  type="checkbox"
-                  className="switch"
-                  name='hearing'
-                ></input></div>
-
-            <div className="checkboxdiv">
-                <label htmlFor='vision'>Vision</label>
-                <input
-                  type="checkbox"
-                  className="switch"
-                  name='vision'
-                 ></input></div> 
-
-            <div className="checkboxdiv">
-                <label htmlFor='injuries'>Injuries</label>
-                <input
-                  type="checkbox"
-                  className="switch"
-                  name='injuries'
-                ></input></div>
-
-            <div className="checkboxdiv">
-                <label htmlFor='nutrition'>Nutrition</label>
-                <input
-                  type="checkbox"
-                  className="switch"
-                  name='nutrition'
-                ></input></div>
+            <CheckBox name={'sleep'} title={'Sleep'} onChange={this.props.onCheckboxChange} />
+            <CheckBox name={'hearing'} title={'Hearing'} onChange={this.props.onCheckboxChange} />
+            <CheckBox name={'vision'} title={'Vision'} onChange={this.props.onCheckboxChange} />
+            <CheckBox name={'injuries'} title={'Injuries'} onChange={this.props.onCheckboxChange} />
+            <CheckBox name={'nutrition'} title={'Nutrition'} onChange={this.props.onCheckboxChange} />
           </div>
-            
-             
-            
       </div>
     )}
   }
@@ -106,32 +69,11 @@ export class Step3 extends React.Component {
       <div className="form-group">
           <h1>What areas would you like to improve?</h1>
           <div className='icon-areas'></div>
-          <h1 className="specialh">Mental</h1>
-          <div className="checkbox-container">
-          <div className="checkboxdiv">
-            <label htmlFor='mindset'>Mindset</label>
-            <input
-              type="checkbox"
-              className="switch"
-              name='mindset'
-            ></input></div>
-
-           <div className="checkboxdiv">
-            <label htmlFor='stress'>Stress</label>
-            <input
-              type="checkbox"
-              className="switch"
-              name='stress'
-            ></input></div>
-
-           <div className="checkboxdiv">
-             <label htmlFor='psychology'>Physiology</label>
-             <input
-              type="checkbox"
-              className="switch"
-              name='psychology'
-            ></input></div>
-           
+            <h1 className="specialh">Mental</h1>
+            <div className="checkbox-container">
+            <CheckBox name={'mindset'} title={'Mindset'} onChange={this.props.onCheckboxChange} />
+            <CheckBox name={'stress'} title={'Stress'} onChange={this.props.onCheckboxChange} />
+            <CheckBox name={'psychology'} title={'Psychology'} onChange={this.props.onCheckboxChange} />
             </div>
       </div>
     )}
@@ -149,58 +91,12 @@ export class Step4 extends React.Component {
           <div className='icon-areas'></div>
           <h1 className="specialh">Skills</h1>
           <div className="checkbox-container">
-
-          <div className="checkboxdiv">
-            <label htmlFor='tactical'>Tactical</label>
-            <input
-              type="checkbox"
-              value='Tactical'
-              name='tactical'
-              className="switch"
-            ></input>
+            <CheckBox name={'tactical'} title={'Tactical'} onChange={this.props.onCheckboxChange} />
+            <CheckBox name={'strategy'} title={'Strategy'} onChange={this.props.onCheckboxChange} />
+            <CheckBox name={'leadership'} title={'Leadership'} onChange={this.props.onCheckboxChange} />
+            <CheckBox name={'multitasking'} title={'Multitasking'} onChange={this.props.onCheckboxChange} />
+            <CheckBox name={'communication'} title={'Communication'} onChange={this.props.onCheckboxChange} />
           </div>
-           
-          <div className="checkboxdiv">
-            <label htmlFor='strategy'>Strategy</label>
-            <input
-              type="checkbox"
-              value='Strategy'
-              name='strategy'
-              className="switch"
-            ></input>
-          </div>
-           
-          <div className="checkboxdiv">
-            <label htmlFor='leadership'>Leadership</label>
-            <input
-              type="checkbox"
-              value='Leadership'
-              name='leadership'
-              className="switch"
-            ></input>
-          </div>
-             
-          <div className="checkboxdiv">
-            <label htmlFor='multitasking'>Multitasking</label>
-            <input
-              type="checkbox"
-              value='Multi-tasking'
-              name='multitasking'
-              className="switch"
-            ></input>
-          </div>
-             
-
-          <div className="checkboxdiv">
-            <label htmlFor='communication'>Communication</label>
-            <input
-              type="checkbox"
-              value='Communication'
-              name='communication'
-              className="switch"
-            ></input>
-          </div>
-            </div>
       </div>
     )}
   }
@@ -216,37 +112,9 @@ export class Step5 extends React.Component {
         <div className='icon-areas'></div>
         <h1 className="specialh">Gaming</h1>
         <div className="checkbox-container">
-
-        <div className="checkboxdiv">
-          <label htmlFor='technology'>Technology</label>
-          <input
-            type="checkbox"
-            value='Technology'
-            name='technology'
-            className="switch"
-          ></input>
-          </div>
-          
-          <div className="checkboxdiv">
-            <label htmlFor='coordination'>Hand/eye coordination</label>
-            <input
-              type="checkbox"
-              value='Hand/eye coordination'
-              name='coordination'
-              className="switch"
-            ></input>
-            </div>
-        
-            <div className="checkboxdiv">
-              <label htmlFor='reaction'>Reaction time</label>
-              <input
-                type="checkbox"
-                value='Reaction time'
-                name='reaction'
-                className="switch"
-              ></input>
-              </div>
-           
+        <CheckBox name={'technology'} title={'Technology'} onChange={this.props.onCheckboxChange} />
+        <CheckBox name={'coordination'} title={'Coordination'} onChange={this.props.onCheckboxChange} />
+        <CheckBox name={'reaction'} title={'Reaction'} onChange={this.props.onCheckboxChange} />
           </div>
     </div>
   )}
@@ -298,8 +166,7 @@ export class Step6 extends React.Component {
           </select> */}
           
         <div className="selected-games">
-          <p className="name-selected">The Sims</p>
-          <p className="name-selected">Skyrim</p>
+          <p className="name-selected">World of Warcraft</p>
         </div>
     </div>
   )}
@@ -361,41 +228,11 @@ export class Step8 extends React.Component {
     <div className="form-group">
         <h1>What type of content would you want to recive</h1>
         <div className="checkbox-container">
-          <div className="checkboxdiv">
-            <label htmlFor='articles'>Articles</label>
-            <input
-            type="checkbox"
-            name='articles'
-            className="switch"
-            ></input>
-            </div>
-          
-          <div className="checkboxdiv">
-            <label htmlFor='discounts'>Discounts</label>
-            <input
-              type="checkbox"
-              name='dicounts'
-              className="switch"
-              ></input>
-              </div>
-          
-              <div className="checkboxdiv">
-                <label htmlFor='events'>Online community events</label>
-                <input
-                  type="checkbox"
-                  name='events'
-                  className="switch"
-                ></input>
-                </div>
-           
-              <div className="checkboxdiv"> 
-                <label htmlFor='competitions'>Competitions</label>
-                <input
-                  type="checkbox"
-                  name='competitions'
-                  className="switch"
-                ></input>
-                </div>   
+
+        <CheckBox name={'articles'} title={'Articles'} onChange={this.props.onCheckboxChange} />
+        <CheckBox name={'discounts'} title={'Discounts'} onChange={this.props.onCheckboxChange} />
+        <CheckBox name={'events'} title={'Events'} onChange={this.props.onCheckboxChange} />
+        <CheckBox name={'competitions'} title={'Competitions'} onChange={this.props.onCheckboxChange} />
           </div>
     </div>
   )}
