@@ -109,7 +109,6 @@ export class Modal2 extends React.Component {
     document.querySelector(".frontpageBody").classList.remove("overlay");
     document.querySelector(".btn-frontpage").classList.remove("fadeout");
     // document.querySelector(".frontpageBody").classList.add("overlayout");
-    // document.querySelector(".btn-frontpage").classList.ad
   }
 
   render() {
