@@ -77,18 +77,21 @@
   }
 }
 
-.background-fadeout {
-  animation: background-fadeout 2s;
+.slideupquiz {
+  animation-name: slideupquiz;
+  animation-duration: 1s;
+  animation-delay: 0;
   animation-fill-mode: forwards;
 }
 
-@keyframes background-fadeout {
+@keyframes slideupquiz {
   0% {
-    background: $dark;
+    transform: translateY(10%);
+    // opacity: 1;
   }
 
   100% {
-    background: transparent;
+    transform: translateY(0%);
   }
 }
 
