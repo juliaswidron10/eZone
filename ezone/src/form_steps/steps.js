@@ -122,7 +122,7 @@ export class Step5 extends React.Component {
 
 export class Step6 extends React.Component {
   render() {
-  if (this.props.currentStep !== 6) { // Prop: The current step
+  if (this.props.currentStep !== 6 ) { // Prop: The current step
     return null
   }
   // The markup for the Step 1 UI
@@ -240,11 +240,18 @@ export class Step8 extends React.Component {
 
 export class Thankyou extends React.Component {
   render() {
+
+
     if (this.props.currentStep !== 9) { 
       return null
     }
-    return(<div>
-      <h1>NEED TO PUT ALEXS ANIMATION HERE</h1>
-    </div>)
-  }
+    return(
+      <div className=" thankyou">
+        <h3 className="thankyou-animated TextToAnimate">
+          THANK YOU FOR JOINING!
+        </h3>
+        <p>You're now ready to receive more targeted content.</p>
+        <a href="https://ezone-esports.com/">Homepage</a>
+      </div>
+    )}
 }

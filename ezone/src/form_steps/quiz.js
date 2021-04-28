@@ -72,7 +72,7 @@ export class Quiz extends React.Component {
 
     previousButton() {
         let currentStep = this.state.currentStep;
-        if(currentStep !==1){
+        if(currentStep !==1 && currentStep < 9){
           return (
             <button 
               className="btn btn-secondary" 
@@ -126,6 +126,7 @@ export class Quiz extends React.Component {
                         <Step6 currentStep={this.state.currentStep} onChange={this.handleChange}/>
                         <Step7 currentStep={this.state.currentStep} onChange={this.handleChange}/>
                         <Step8 currentStep={this.state.currentStep} onCheckboxChange={this.handleChangeCheckbox} onChange={this.handleChange}/>
+                        <Thankyou currentStep={this.state.currentStep} />
                         <div className="navibutton">
                         {this.previousButton()}
                         {this.nextButton()}

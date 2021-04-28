@@ -179,3 +179,41 @@ input.switch{
     color: $orange;
     padding-top: 2rem;
 }
+
+.thankyou{
+    padding: 6rem 2rem 2rem 2rem;
+}
+.thankyou p {
+    font-family: "Uniform-Pro-Med";
+    padding: 5rem 2rem 2rem 2rem;
+}
+.thankyou a {
+    border: 2px solid $orange;
+    border-radius: 2rem;
+    width:min-content;
+    align-self: center;
+    padding: .6rem 2rem;
+    color: $orange;
+    text-decoration: none;
+}
+.thankyou a:hover{
+    background-color: $orange;
+    opacity: 60%;
+    color: $dark
+}
+
+.thankyou-animated{
+    font-size: 3rem;
+    font-family: "Uniform-Pro-Blk";
+    color: $green;
+    animation: showtext 1s 1 forwards ease-in;
+}
+
+@keyframes showtext {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity:100%;
+    }
+}
