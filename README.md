@@ -1,6 +1,8 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You can preview the project at:
+##https://eager-darwin-85e687.netlify.app
 
 ## Available Scripts
 
